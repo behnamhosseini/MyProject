@@ -11,14 +11,6 @@ class PhoneActivationCodeController extends Controller
 
     public function create()
     {
-        // random code
-        $code='';
-        for ($j=0; $j <5; $j++) {
-            $rand = mt_rand(0, 9);
-            $code.= $rand;
-        }
-
-        $expire=now()->addMinutes(2);
 
         $this->validate(request(),[
             'number' => 'required|regex:/^09[0-9]{9}$/',
@@ -30,6 +22,15 @@ class PhoneActivationCodeController extends Controller
 
         if(!PhoneActivationCode::where('phoneNumber', $number)->first())
         {
+            // random code
+            $code='';
+            for ($j=0; $j <5; $j++) {
+                $rand = mt_rand(0, 9);
+                $code.= $rand;
+            }
+
+            $expire=now()->addMinutes(2);
+
             $save = PhoneActivationCode::create([
                 'phoneNumber' => request('number'),
                 'code' => $code,
@@ -65,7 +66,6 @@ class PhoneActivationCodeController extends Controller
                 $phone=PhoneActivationCode::where('phoneNumber', session('phoneNumber'))->first();
                 $phone->update(['activation' => 1]);
                 return redirect('AccountSettings');
-//                return view('auth.complatedInformation');
             } else {
                 PhoneActivationCode::where('phoneNumber', session('phoneNumber'))->delete();
                 session(['code'=>'کد وارد شده اشتباه است.دوباره تلاش کنید']);

@@ -12,9 +12,6 @@ use Alert;
 use phpDocumentor\Reflection\Location;
 use GeoIP;
 
-
-//use Torann\GeoIP\Location;
-
 class UserController extends Controller
 {
 
@@ -32,9 +29,9 @@ class UserController extends Controller
         return view('auth.login');
     }
 
-    public function profilePage()
+    public function profilePage(User $user)
     {
-        return view('user.Profile.ProfilePage');
+        return view('user.Profile.ProfilePage',compact('user'));
     }
 
     public function setCustomStatus(Request $request)
