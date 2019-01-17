@@ -10,13 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <script src="/js/jquery.js"></script>
+    <script src="/js/jquery-3.3.1.js"></script>
 
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap-reboot.css">
+    <link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap-grid.css">
 
     <!-- Theme Styles CSS -->
     <link rel="stylesheet" type="text/css" href="/css/theme-styles.css">

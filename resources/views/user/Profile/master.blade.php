@@ -17,6 +17,8 @@
 	<link href="/css/faceMocion.css" rel="stylesheet" type="text/css" />
 
 	<link rel="stylesheet" href="/css/emojionearea.css">
+	<link rel="stylesheet" href="http://demo.itsolutionstuff.com/plugin/croppie.css">
+	<script src="http://demo.itsolutionstuff.com/plugin/croppie.js"></script>
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap-reboot.css">
@@ -34,14 +36,6 @@
 	<!-- Styles for plugins -->
 	<link rel="stylesheet" type="text/css" href="/css/jquery.mCustomScrollbar.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap-select.css">
-
-	<style>
-		a:hover{
-			text-decoration:none;
-		}
-	</style>
-
-
 </head>
 <body>
 
@@ -175,17 +169,17 @@
 			</ul>
 
 			<div class="profile-completion">
-
-				<div class="skills-item">
-					<div class="skills-item-info">
-						<span class="skills-item-title"> تکمیل مشخصات کاربری</span>
-						<span class="skills-item-count"><span class="count-animate" data-speed="1000" data-refresh-interval="200" data-to="{{$accountCompletion}}"  data-from="0"></span><span class="units">{{$accountCompletion}}%</span></span>
-					</div>
-					<div class="skills-item-meter">
-						<span class="skills-item-meter-active bg-primary" style="width: {{$accountCompletion}}%"></span>
-					</div>
-				</div>
-
+              {{--@if(auth()->check())--}}
+				{{--<div class="skills-item">--}}
+					{{--<div class="skills-item-info">--}}
+						{{--<span class="skills-item-title"> تکمیل مشخصات کاربری</span>--}}
+						{{--<span class="skills-item-count"><span class="count-animate" data-speed="1000" data-refresh-interval="200" data-to="{{$accountCompletion}}"  data-from="0"></span><span class="units">{{$accountCompletion}}%</span></span>--}}
+					{{--</div>--}}
+					{{--<div class="skills-item-meter">--}}
+						{{--<span class="skills-item-meter-active bg-primary" style="width: {{$accountCompletion}}%"></span>--}}
+					{{--</div>--}}
+				{{--</div>--}}
+               {{--@endif()--}}
 				<span>اطلاعات <a href="#">حساب کاربری</a> را تکمیل کنید تا کاربران بتوانند شما را براحتی پیدا کنند!</span>
 
 			</div>
@@ -370,7 +364,7 @@
 
 <div class="fixed-sidebar right">
 	<div class="fixed-sidebar-right sidebar--small" id="sidebar-right">
-
+@auth()
 		<div class="mCustomScrollbar" data-mcs-theme="dark">
 			<ul class="chat-users">
 				<?php $img = 1?>
@@ -392,7 +386,7 @@
 
 			</ul>
 		</div>
-
+@endauth()
 		<div class="search-friend inline-items">
 			<a href="#" class="js-sidebar-open">
 				<svg class="olymp-menu-icon"><use xlink:href="icons/icons.svg#olymp-menu-icon"></use></svg>
@@ -1910,7 +1904,7 @@
                 _token: '{{ csrf_token() }}'
             }
         }).done(function(response) {
-            $("#customStatusShow").text(response)
+             $("#customStatusShow").text(response)
         });
 
 		$("#customStatusForm").click(function(e){
@@ -1945,10 +1939,72 @@
 
 
 </script>
-{{--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>--}}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#post").emojioneArea({
+            pickerPosition: "bottom"
+    });
+    });
+</script>
+
+
+<script type="text/javascript">
+
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+
+    $uploadCrop = $('#upload-demo').croppie({
+        enableExif: true,
+        viewport: {
+            width: 200,
+            height: 200,
+        },
+        boundary: {
+            width: 250,
+            height: 250
+        }
+    });
+
+
+    $('#upload').on('change', function () {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $uploadCrop.croppie('bind', {
+                url: e.target.result
+            }).then(function(){
+                console.log('jQuery bind complete');
+            });
+        }
+        reader.readAsDataURL(this.files[0]);
+    });
+
+
+    $('.upload-result').on('click', function (ev) {
+        $uploadCrop.croppie('result', {
+            type: 'canvas',
+            size: 'viewport'
+        }).then(function (resp) {
+            html = '<img src="' + resp + '" />';
+            $("#upload-demo-i").html(html);
+			$("#postImage").val(resp);
+        });
+
+    });
+
+
+</script>
+
+
+
+
 <script src="js/popper.min.js" ></script>
 <script src="js/bootstrap.min.js" ></script>
-
+<script type="text/javascript" src="/js/emojionearea.js"></script>
 <script src="/js/material.min.js"></script>
 <script src="/js/theme-plugins.js"></script>
 <script src="/js/selectize.min.js"></script>
