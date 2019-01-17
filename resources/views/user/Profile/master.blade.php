@@ -160,28 +160,33 @@
 						<span class="left-menu-title">تولد دوستان</span>
 					</a>
 				</li>
-				{{--<li>--}}
-					{{--<a href="/Statistics">--}}
-						{{--<svg class="olymp-stats-icon left-menu-icon"  data-toggle="tooltip" data-placement="left" title="" data-original-title="Account Stats"><use xlink:href="icons/icons.svg#olymp-stats-icon"></use></svg>--}}
-						{{--<span class="left-menu-title">وضعیت حساب</span>--}}
-					{{--</a>--}}
-				{{--</li>--}}
+				@auth
+					<li>
+						<a href="/ProfilePageFinancialAffairs/{{auth()->user()->userName}}">
+							<svg class="olymp-stats-icon left-menu-icon"  data-toggle="tooltip" data-placement="left" title="" data-original-title=" حساب کتاب"><use xlink:href="/icons/icons.svg#olymp-stats-icon"></use></svg>
+							<span class="left-menu-title">حساب کتاب</span>
+						</a>
+					</li>
+				@endauth
 			</ul>
 
-			<div class="profile-completion">
-              {{--@if(auth()->check())--}}
-				{{--<div class="skills-item">--}}
-					{{--<div class="skills-item-info">--}}
-						{{--<span class="skills-item-title"> تکمیل مشخصات کاربری</span>--}}
-						{{--<span class="skills-item-count"><span class="count-animate" data-speed="1000" data-refresh-interval="200" data-to="{{$accountCompletion}}"  data-from="0"></span><span class="units">{{$accountCompletion}}%</span></span>--}}
-					{{--</div>--}}
-					{{--<div class="skills-item-meter">--}}
-						{{--<span class="skills-item-meter-active bg-primary" style="width: {{$accountCompletion}}%"></span>--}}
-					{{--</div>--}}
-				{{--</div>--}}
-               {{--@endif()--}}
-				<span>اطلاعات <a href="#">حساب کاربری</a> را تکمیل کنید تا کاربران بتوانند شما را براحتی پیدا کنند!</span>
+			@auth
+				<div class="profile-completion">
 
+					<div class="skills-item">
+						<div class="skills-item-info">
+							<span class="skills-item-title"> تکمیل مشخصات کاربری</span>
+							<span class="skills-item-count"><span class="count-animate" data-speed="1000" data-refresh-interval="200" data-to="{{$accountCompletion}}"  data-from="0"></span><span class="units">{{$accountCompletion}}%</span></span>
+						</div>
+						<div class="skills-item-meter">
+							<span class="skills-item-meter-active bg-primary" style="width: {{$accountCompletion}}%"></span>
+						</div>
+					</div>
+
+					<span>اطلاعات <a href="#">حساب کاربری</a> را تکمیل کنید تا کاربران بتوانند شما را براحتی پیدا کنند!</span>
+
+				</div>
+			@endauth
 			</div>
 		</div>
 	</div>
