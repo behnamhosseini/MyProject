@@ -20,6 +20,7 @@ class CreatePostsTable extends Migration
             $table->integer('payment_id')->unsigned()->nullable();
             $table->text('body');
             $table->string('imageUrl')->nullable();
+            $table->string('location')->nullable();
             $table->string('mood')->default("amo");
             $table->integer('likeCount')->default(0);
             $table->integer('commentCount')->default(0);

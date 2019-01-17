@@ -32,7 +32,7 @@ Route::middleware('checkFullyActivated')->group(function(){
     $this->post('/getCustomStatus','UserController@getCustomStatus')->name('getCustomStatus');
     $this->get('/Newsfeed','UserController@Newsfeed')->name('Newsfeed');
     $this->post('/sendPost','PostController@sendPost')->name('sendPost');
-
+    Route::post('/ip','UserController@ip');
 });
 
 Route::middleware('checkPhoneActivated')->group(function(){
@@ -43,7 +43,5 @@ Route::middleware('checkPhoneActivated')->group(function(){
 
 
 Route::get('/test',function (){
-     return view('user.Profile.test');
+     return view('imageCrop');
 });
-Route::post('/ip','UserController@ip');
-
