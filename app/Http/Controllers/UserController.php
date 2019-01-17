@@ -32,14 +32,167 @@ class UserController extends Controller
         return view('auth.login');
     }
 
-    public function profilePage()
+    public function profilePage(User $user)
     {
-        return view('user.Profile.ProfilePage');
+        return view('user.Profile.ProfilePage', compact('user'));
+    }
+
+    public function profilePageAbout(User $user)
+    {
+        return view('user.Profile.ProfilePage-About', compact('user'));
+    }
+
+    public function profilePagePhotos(User $user)
+    {
+        return view('user.Profile.ProfilePage-Photos', compact('user'));
+    }
+
+    public function profilePageVideos(User $user)
+    {
+        return view('user.Profile.ProfilePage-Videos', compact('user'));
+    }
+    public function profilePageFavPages(User $user)
+    {
+        return view('user.Profile.ProfilePage-FavPages', compact('user'));
+    }
+   public function profilePageFriends(User $user)
+    {
+        return view('user.Profile.ProfilePage-Friends', compact('user'));
+    }
+   public function ProfilePageBlogPosts(User $user)
+    {
+        return view('user.Profile.ProfilePage-BlogPosts', compact('user'));
+    }
+
+   public function ProfilePageFinancialAffairs(User $user)
+    {
+        return view('user.Profile.ProfilePage-financialAffairs', compact('user'));
+    }
+    public function FriendsRequests()
+    {
+
+        return view('user.Profile.FriendsRequests');
+    }
+    public function Notifications()
+    {
+
+        return view('user.Profile.Notifications');
+    }
+
+    public function uploadHeaderImage()
+    {
+        $this->validate(\request(), [
+           'pic' => 'required|image'
+        ]);
+        $image = \request()->file('pic');
+        $name = auth()->user()->userName;
+        $imagePath = "/uploads/{$name}/header/";
+        $fileName = $image->getClientOriginalName();
+        $image->move(public_path($imagePath), $fileName);
+        $url = $imagePath . $fileName;
+
+        $profilePictures = auth()->user()->profilePictures;
+        $profilePictures['header'] = $url;
+        auth()->user()->update([
+            'profilePictures' => $profilePictures,
+        ]);
+    }
+    public function uploadProfileImage()
+    {
+        $this->validate(\request(), [
+            'pic' => 'required|image'
+        ]);
+        $image = \request()->file('pic');
+        $name = auth()->user()->userName;
+        $imagePath = "/uploads/{$name}/profile-everyOne/";
+        $fileName = $image->getClientOriginalName();
+        $image->move(public_path($imagePath), $fileName);
+        $url = $imagePath . $fileName;
+
+        $profilePictures = auth()->user()->profilePictures;
+        $profilePictures['everyOne'] = $url;
+        auth()->user()->update([
+            'profilePictures' => $profilePictures,
+        ]);
+    }
+
+    public function uploadFamilyImage()
+    {
+        $this->validate(\request(), [
+            'pic' => 'required|image'
+        ]);
+        $image = \request()->file('pic');
+        $name = auth()->user()->userName;
+        $imagePath = "/uploads/{$name}/profile-family/";
+        $fileName = $image->getClientOriginalName();
+        $image->move(public_path($imagePath), $fileName);
+        $url = $imagePath . $fileName;
+
+        $profilePictures = auth()->user()->profilePictures;
+        $profilePictures['family'] = $url;
+        auth()->user()->update([
+            'profilePictures' => $profilePictures,
+        ]);
+    }
+    public function uploadFriendsImage()
+    {
+        $this->validate(\request(), [
+            'pic' => 'required|image'
+        ]);
+        $image = \request()->file('pic');
+        $name = auth()->user()->userName;
+        $imagePath = "/uploads/{$name}/profile-friends/";
+        $fileName = $image->getClientOriginalName();
+        $image->move(public_path($imagePath), $fileName);
+        $url = $imagePath . $fileName;
+
+        $profilePictures = auth()->user()->profilePictures;
+        $profilePictures['friends'] = $url;
+        auth()->user()->update([
+            'profilePictures' => $profilePictures,
+        ]);
+    }
+    public function uploadRelativesImage()
+    {
+        $this->validate(\request(), [
+            'pic' => 'required|image'
+        ]);
+        $image = \request()->file('pic');
+        $name = auth()->user()->userName;
+        $imagePath = "/uploads/{$name}/profile-relatives/";
+        $fileName = $image->getClientOriginalName();
+        $image->move(public_path($imagePath), $fileName);
+        $url = $imagePath . $fileName;
+
+        $profilePictures = auth()->user()->profilePictures;
+        $profilePictures['relatives'] = $url;
+        auth()->user()->update([
+            'profilePictures' => $profilePictures,
+        ]);
+    }
+
+    public function chargeYourAccount(Request $request)
+    {
+        $user = auth()->user();
+        $amount = $request->chargeAmount;
+        $this->validate($request, [
+           'chargeAmount' => 'required|numeric|min:1000'
+        ]);
+        $user->payments()->create([
+           'user_id' => $user->id,
+           'amount' => $amount,
+           'status' => 1,
+        ]);
+        $newCredit = $amount + $user->credit;
+        User::find(auth()->user()->id)->update([
+           'credit'  => $newCredit
+        ]);
+        alert()->success("حساب شما به مقدار $amount افزایش یافت",'عملیات موفقیت آمیز!' )->persistent('اوکی');
+        return back();
     }
 
     public function setCustomStatus(Request $request)
     {
-//        return $request;
         User::find(auth()->user()->id)->update([
            'customStatus'  => $request->customStatus
         ]);
@@ -77,6 +230,7 @@ class UserController extends Controller
 
         return view('user.Profile.Hobbies');
     }
+
     public function UpdateHobbies(Request $request)
     {
 
@@ -220,7 +374,6 @@ class UserController extends Controller
 
 
         if (auth()->check()) {
-
             $user = auth()->user()->id;
             $r = User::find($user)->update([
                 'dateOfBirth' => request('dateOfBirth'),
@@ -305,6 +458,7 @@ class UserController extends Controller
                 ],
                 "profilePictures" => [
                     "header" => null,
+                    "everyOne" => null,
                     "friends" => null,
                     "family"=> null,
                     "relatives"=> null,

@@ -1,24 +1,5 @@
-@extends('user.Profile.master')
-@section('header')
-    <div class="main-header">
-        <div class="content-bg-wrap">
-            <div class="content-bg bg-account"></div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 m-auto col-md-8 col-sm-12 col-xs-12">
-                    <div class="main-header-content">
-                        <h1>مشخصات خود را سفارشی کنید!</h1>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img class="img-bottom" src="img/account-bottom.png" alt="friends">
-    </div>
-@endsection
-@section('content2')
+@extends('user.Profile.master-Youraccount')
+@section('content-y-a')
     <div class="row">
         <div class="col-xl-9 order-xl-2 col-lg-9 order-lg-2 col-md-12 order-md-1 col-sm-12 col-xs-12">
             <div class="ui-block">
@@ -176,69 +157,4 @@
             </nav>
         </div>
 
-        <div class="col-xl-3 order-xl-1 col-lg-3 order-lg-1 col-md-12 order-md-2 col-sm-12 col-xs-12 responsive-display-none">
-            <div class="ui-block">
-                <div class="your-profile">
-                    <div class="ui-block-title ui-block-title-small">
-                        <h6 class="title">پروفایل شما</h6>
-                    </div>
-
-                    <div id="accordion" role="tablist" aria-multiselectable="true">
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingOne">
-                                <h6 class="mb-0">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        تنظیمات پروفایل
-                                        <svg class="olymp-dropdown-arrow-icon"><use xlink:href="icons/icons.svg#olymp-dropdown-arrow-icon"></use></svg>
-                                    </a>
-                                </h6>
-                            </div>
-
-                            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
-                                <ul class="your-profile-menu">
-                                    <li>
-                                        <a href="28-YourAccount-PersonalInformation.html">اطلاعات شخصی</a>
-                                    </li>
-                                    <li>
-                                        <a href="29-YourAccount-AccountSettings.html">تنظیمات حساب</a>
-                                    </li>
-                                    <li>
-                                        <a href="30-YourAccount-ChangePassword.html">تغییر رمز عبور</a>
-                                    </li>
-                                    <li>
-                                        <a href="31-YourAccount-HobbiesAndInterests.html">علاقه مندی ها و سرگرمی ها</a>
-                                    </li>
-                                    <li>
-                                        <a href="32-YourAccount-EducationAndEmployement.html">آموزش و تحصیل</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="ui-block-title">
-                        <a href="33-YourAccount-Notifications.html" class="h6 title">اطلاعیه ها</a>
-                        <a href="#" class="items-round-little bg-primary">8</a>
-                    </div>
-                    <div class="ui-block-title">
-                        <a href="34-YourAccount-ChatMessages.html" class="h6 title">چت ها / پیام ها</a>
-                    </div>
-                    <div class="ui-block-title">
-                        <a href="35-YourAccount-FriendsRequests.html" class="h6 title">درخواست های دوستی</a>
-                        <a href="#" class="items-round-little bg-blue">4</a>
-                    </div>
-                    <div class="ui-block-title ui-block-title-small">
-                        <h6 class="title">صفحات مورد علاقه</h6>
-                    </div>
-                    <div class="ui-block-title">
-                        <a href="36-FavPage-SettingsAndCreatePopup.html" class="h6 title">ایجاد صفحه مورد علاقه</a>
-                    </div>
-                    <div class="ui-block-title">
-                        <a href="36-FavPage-SettingsAndCreatePopup.html" class="h6 title">تنظیمات صفحات</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection

@@ -7,6 +7,67 @@ body * {
     font-weight: normal !important;
 }
 /*------------- #UI-BLOCK --------------*/
+.imageUploadInput{
+    display: none;
+}
+/*input[id="headerImageUpload"] {*/
+    /*display: none;*/
+/*}*/
+/*input[id="profileImageUpload"] {*/
+    /*display: none;*/
+/*}*/
+.avatar{
+    width: 40px;
+    overflow: hidden;
+}
+
+#headerImagePreview {
+    width: 300px;
+    height: 100px;
+    background-position: center center;
+    background-size: cover;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+    display: inline-block;
+}
+#profileImagePreview {
+    width: 180px;
+    height: 180px;
+    background-position: center center;
+    background-size: cover;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+    display: inline-block;
+}
+
+#familyImagePreview {
+    width: 180px;
+    height: 180px;
+    background-position: center center;
+    background-size: cover;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+    display: inline-block;
+}
+#friendsImagePreview {
+    width: 180px;
+    height: 180px;
+    background-position: center center;
+    background-size: cover;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+    display: inline-block;
+}
+#relativesImagePreview {
+    width: 180px;
+    height: 180px;
+    background-position: center center;
+    background-size: cover;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+    display: inline-block;
+}
+#disable-facemocion {
+    pointer-events:none;
+    width: 50px;
+    height: 50px;
+    /*border-radius: 100%;;*/
+}
 
 .ui-block {
     background-color: #fff;
@@ -1629,6 +1690,7 @@ fieldset[disabled] .checkbox input[type=checkbox],
     height: 98px;
     width: 98px;
     margin-bottom: 10px;
+    /*border-radius: 50%;*/
 }
 
 .friend-avatar .author-thumb img {
@@ -3148,17 +3210,17 @@ body.overlay-enable:before {
 }
 
 .update-header-photo {
-    width: 770px;
+    width: 700px;
 }
 
 .upload-photo-item {
     display: inline-block;
     vertical-align: middle;
     width: 49%;
-    padding: 50px;
+    padding:50px ;
     text-align: center;
     fill: #c2c5d9;
-    border-left: 1px solid #e6ecf5;
+    /*border-left: 1px solid #e6ecf5;*/
 }
 
 .upload-photo-item:first-child {

@@ -132,7 +132,7 @@
                 });
              }else if(response == '/AccountSettings'){
 
-                window.location.replace(response);
+                window.location.replace('/AccountSettings');
 
             } else {
                 $("#enter-m-n").hide(function() {

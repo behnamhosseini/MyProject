@@ -1,24 +1,4 @@
 @extends('user.Profile.master-Youraccount')
-@section('header')
-    <div class="header-spacer header-spacer-small"></div>
-    <div class="main-header">
-        <div class="content-bg-wrap">
-            <div class="content-bg bg-account"></div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 m-auto col-md-8 col-sm-12 col-xs-12">
-                    <div class="main-header-content">
-                        <h1>مشخصات خود را سفارشی کنید!</h1>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img class="img-bottom" src="img/account-bottom.png" alt="friends">
-    </div>
-@endsection
 @section('content-y-a')
     <div class="row">
         <div class="col-xl-9 order-xl-2 col-lg-9 order-lg-2 col-md-12 order-md-1 col-sm-12 col-xs-12">
@@ -86,10 +66,10 @@
                                             _token: '{{ csrf_token() }}',
                                         },
                                         success: function (response) {
-                                            if (response == 'married') {
+                                            if (response == 'متاهل') {
                                                 $("#inRellWith").hide();
                                                 $("#spouse").show();
-                                            } else if (response == 'inRell') {
+                                            } else if (response == 'در رابطه') {
                                                 $("#inRellWith").show();
                                                 $("#spouse").hide();
                                             } else {
@@ -103,11 +83,11 @@
                                         let value = $(this).find("option:selected").attr("value");
 
                                         switch (value) {
-                                            case "inRell":
+                                            case "در رابطه":
                                                 $("#inRellWith").show();
                                                 $("#spouse").hide();
                                                 break;
-                                            case "married":
+                                            case "متاهل":
                                                 $("#spouse").show();
                                                 $("#inRellWith").hide();
                                                 break;
@@ -124,11 +104,11 @@
                             <div class="col-lg-6 col-md-3 col-sm-12 col-xs-12">
                                 <div class="form-group label-floating is-select">
                                     <label class="control-label">جنسیت </label>
-                                    <select class="selectpicker form-control" name="sex" size="auto">
-                                        <option value="female" {{auth()->check() ? auth()->user()->sex == 'female' ? 'selected' : '' : '' }}>
+                                    <select class=" form-control" name="sex" size="auto">
+                                        <option value="زن" {{auth()->check() ? auth()->user()->sex == 'زن' ? 'selected' : '' : '' }}>
                                             زن
                                         </option>
-                                        <option value="male" {{auth()->check() ? auth()->user()->sex == 'male' ? 'selected' : '' : '' }}>
+                                        <option value="مرد" {{auth()->check() ? auth()->user()->sex == 'مرد' ? 'selected' : '' : '' }}>
                                             مرد
                                         </option>
                                     </select>
@@ -138,16 +118,16 @@
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group label-floating is-select">
                                     <label class="control-label">وضعیت تاهل</label>
-                                    <select id="maritalStatus" class="selectpicker form-control" name="maritalStatus"
+                                    <select id="maritalStatus" class=" form-control" name="maritalStatus"
                                             size="auto">
-                                        <option {{auth()->check() ? auth()->user()->maritalStatus == 'single' ? 'selected' : '' : '' }} value="single">
+                                        <option {{auth()->check() ? auth()->user()->maritalStatus == 'مجرد' ? 'selected' : '' : '' }} value="مجرد">
                                             مجرد
                                         </option>
-                                        <option {{auth()->check() ? auth()->user()->maritalStatus == 'married' ? 'selected' : '' : '' }} value="married">
+                                        <option {{auth()->check() ? auth()->user()->maritalStatus == 'متاهل' ? 'selected' : '' : '' }} value="متاهل">
                                             متاهل
                                         </option>
-                                        <option {{auth()->check() ? auth()->user()->maritalStatus == 'inRell' ? 'selected' : '' : '' }} id="inRell"
-                                                value="inRell">در رابطه
+                                        <option {{auth()->check() ? auth()->user()->maritalStatus == 'در رابطه' ? 'selected' : '' : '' }} id="inRell"
+                                                value="در رابطه">در رابطه
                                         </option>
                                     </select>
                                 </div>
@@ -186,20 +166,20 @@
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group label-floating is-select">
                                     <label class="control-label">تحصیلات</label>
-                                    <select class="selectpicker form-control" name="degree" size="auto">
-                                        <option value="diploma" {{auth()->check() ? auth()->user()->degree == 'diploma' ? 'selected' : '' : '' }}>
+                                    <select class=" form-control" name="degree" size="auto">
+                                        <option value="دیپلم" {{auth()->check() ? auth()->user()->degree == 'دیپلم' ? 'selected' : '' : '' }}>
                                             دیپلم
                                         </option>
-                                        <option value="associate" {{auth()->check() ? auth()->user()->degree == 'associate' ? 'selected' : '' : '' }}>
+                                        <option value="فوق دیپلم" {{auth()->check() ? auth()->user()->degree == 'فوق دیپلم' ? 'selected' : '' : '' }}>
                                             فوق دیپلم
                                         </option>
-                                        <option value="bachelors" {{auth()->check() ? auth()->user()->degree == 'bachelors' ? 'selected' : '' : '' }}>
+                                        <option value=" لیسانس" {{auth()->check() ? auth()->user()->degree == 'لیسانس' ? 'selected' : '' : '' }}>
                                             لیسانس
                                         </option>
-                                        <option value="masters" {{auth()->check() ? auth()->user()->degree == 'masters' ? 'selected' : '' : '' }}>
+                                        <option value="فوق لیسانس" {{auth()->check() ? auth()->user()->degree == 'فوق لیسانس' ? 'selected' : '' : '' }}>
                                             فوق لیسانس
                                         </option>
-                                        <option value="phd" {{auth()->check() ? auth()->user()->degree == 'phd' ? 'selected' : '' : '' }}>
+                                        <option value="دکتری" {{auth()->check() ? auth()->user()->degree == 'دکتری' ? 'selected' : '' : '' }}>
                                             دکتری
                                         </option>
                                     </select>

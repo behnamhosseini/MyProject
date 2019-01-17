@@ -43,8 +43,24 @@ class User extends Authenticatable
     {
         return jdate($value);
     }
-    public function post()
+    public function getCreatedAtAttribute($value)
     {
-        $this->hasMany(Post::class);
+        return jdate($value);
+    }
+    public function getRouteKeyName()
+    {
+        return 'userName';
+    }
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
+    public function fullName()
+    {
+         return $this->firstName . ' ' . $this->lastName;
     }
 }

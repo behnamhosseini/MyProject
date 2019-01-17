@@ -14,9 +14,9 @@
 
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap-reboot.css">
+    <link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap-grid.css">
 
     <!-- Theme Styles CSS -->
     <link rel="stylesheet" type="text/css" href="/css/theme-styles.css">
