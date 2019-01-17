@@ -18,9 +18,12 @@ class PostController extends Controller
 
         $data = base64_decode($data);
         $image_name= time().'.png';
-        $imageUrl = public_path() . "/upload/" . $image_name;
+        if(!file_exists(public_path() . "/uploads/".auth()->user()->userName."/post-image/"))
+        {
+            mkdir(public_path() . "/uploads/".auth()->user()->userName."/post-image/",0755,true);
+        }
+        $imageUrl= public_path() . "/uploads/".auth()->user()->userName."/post-image/". $image_name;
         file_put_contents($imageUrl , $data);
-
         $postType="post";
         $roll=[
             "user_id" => "required|numeric",

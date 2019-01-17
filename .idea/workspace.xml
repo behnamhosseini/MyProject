@@ -5,21 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0ca83bb-39d9-45af-8564-ac8d5eac8d73" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/MyProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Poll.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Poll.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_12_23_193144_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_12_23_193144_create_posts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/blocks.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/blocks.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/Profile/Newsfeed.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/Profile/Newsfeed.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/Profile/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/Profile/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/1547665177.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/1547665247.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/1547671177.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/1547671652.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/1547671772.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/1547710501.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/1547727408.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/20180328_220521.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/20180328_223425.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/20180328_225345.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +67,7 @@
           <entry key="gitignore" value="4" />
           <entry key="js" value="525" />
           <entry key="json" value="6" />
-          <entry key="php" value="31661" />
+          <entry key="php" value="31986" />
           <entry key="scss" value="75" />
         </counts>
       </usages-collector>
@@ -79,7 +77,7 @@
           <entry key="CSS" value="148" />
           <entry key="JSON" value="6" />
           <entry key="JavaScript" value="525" />
-          <entry key="PHP" value="12810" />
+          <entry key="PHP" value="13135" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="SCSS" value="75" />
         </counts>
@@ -90,11 +88,11 @@
           <entry key="css" value="37" />
           <entry key="env" value="1" />
           <entry key="gitignore" value="2" />
-          <entry key="jpg" value="36" />
+          <entry key="jpg" value="39" />
           <entry key="js" value="43" />
           <entry key="json" value="13" />
           <entry key="php" value="413" />
-          <entry key="png" value="19" />
+          <entry key="png" value="21" />
           <entry key="rnc" value="3" />
           <entry key="scss" value="5" />
           <entry key="ts" value="1" />
@@ -106,7 +104,7 @@
           <entry key="Blade" value="250" />
           <entry key="CSS" value="37" />
           <entry key="HTML" value="1" />
-          <entry key="Image" value="55" />
+          <entry key="Image" value="60" />
           <entry key="JSON" value="13" />
           <entry key="JavaScript" value="43" />
           <entry key="PHP" value="163" />
@@ -121,63 +119,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="44" column="29" lean-forward="true" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+            <state relative-caret-position="238">
+              <caret line="22" column="95" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
               <folding>
                 <element signature="e#40#53#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/user/Profile/master.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="2022" column="20" lean-forward="true" selection-start-line="2022" selection-end-line="2023" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/user/Profile/Newsfeed.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="372" selection-start-line="372" selection-end-line="372" />
-              <folding>
-                <element signature="e#13038#16471#0#HTML" />
-                <element signature="e#13557#13752#0#HTML" />
-                <element signature="e#13972#13990#0#HTML" expanded="true" />
-                <element signature="e#15725#15757#0#HTML" expanded="true" />
-                <element signature="e#16430#16921#0#HTML" />
-                <element signature="e#16963#18036#0#HTML" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/imageCrop.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/upload/1547727408.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -287,10 +236,10 @@
         <option value="$PROJECT_DIR$/resources/views/imageup.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/imageController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
         <option value="$PROJECT_DIR$/resources/views/user/Profile/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/imageCrop.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user/Profile/Newsfeed.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
       </list>
     </option>
   </component>
@@ -459,12 +408,6 @@
             <path>
               <item name="MyProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyProject" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyProject" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -483,19 +426,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\MyProject\resources\views\user\Profile" />
-      <recent name="C:\xampp\htdocs\MyProject\public\css" />
-      <recent name="C:\xampp\htdocs\MyProject\resources\js" />
-      <recent name="C:\xampp\htdocs\MyProject\resources\js\files" />
-      <recent name="C:\xampp\htdocs\MyProject\resources\sass" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\MyProject\public\js" />
       <recent name="C:\xampp\htdocs\MyProject\public\upload" />
       <recent name="C:\xampp\htdocs\MyProject\public\css" />
       <recent name="C:\xampp\htdocs\MyProject\resources\views\user\Profile" />
       <recent name="C:\xampp\htdocs\MyProject\public\fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\MyProject\resources\views\user\Profile" />
+      <recent name="C:\xampp\htdocs\MyProject\public\css" />
+      <recent name="C:\xampp\htdocs\MyProject\resources\js" />
+      <recent name="C:\xampp\htdocs\MyProject\resources\js\files" />
+      <recent name="C:\xampp\htdocs\MyProject\resources\sass" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -534,10 +477,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="412392000" />
+    <option name="totallyTimeSpent" value="414621000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
@@ -593,57 +536,22 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547547108-20180328_223425.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547547197-20180328_223425.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547547523-20180328_223425.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post1547547933-20180328_223425.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547548286-20180328_223425.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547548390-20180328_223425.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547548414-20180328_223425.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post1547548429-20180328_223425.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547548429-20180328_223425.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post1547548475-20180328_223425.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post1547548909-20180328_223425.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547549220-20180328_223425.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547553365-20180328_223425.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547553363-20180328_223425.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post1547553403-20180328_223425.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/1547554529-20180328_223425.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/1547554654-20180328_223425.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547547197-20180328_223425.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547547523-20180328_223425.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post1547547933-20180328_223425.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547548286-20180328_223425.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547548390-20180328_223425.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547548414-20180328_223425.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post1547548429-20180328_223425.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547548429-20180328_223425.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post1547548475-20180328_223425.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post1547548909-20180328_223425.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547549220-20180328_223425.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547553365-20180328_223425.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post/1547553363-20180328_223425.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/upload/image/18/post1547553403-20180328_223425.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/upload/1547554529-20180328_223425.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/upload/1547554654-20180328_223425.jpg" />
     <entry file="file://$PROJECT_DIR$/app/Post.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -743,9 +651,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/jquery.Jcrop.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.Jcrop.min.js" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -773,19 +679,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/upload/1547665177.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/public/upload/1547671177.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/20180328_220521.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/20180328_223425.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/public/upload/1547671772.png">
@@ -796,16 +693,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/upload/1547671652.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="44" column="29" lean-forward="true" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
-          <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/upload/1547710501.png">
       <provider selected="true" editor-type-id="images" />
@@ -820,22 +707,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/user/Profile/master.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="2022" column="20" lean-forward="true" selection-start-line="2022" selection-end-line="2023" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/user/Profile/Newsfeed.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="372" selection-start-line="372" selection-end-line="372" />
-          <folding>
-            <element signature="e#13038#16471#0#HTML" />
-            <element signature="e#13557#13752#0#HTML" />
-            <element signature="e#13972#13990#0#HTML" expanded="true" />
-            <element signature="e#15725#15757#0#HTML" expanded="true" />
-            <element signature="e#16430#16921#0#HTML" />
-            <element signature="e#16963#18036#0#HTML" />
-          </folding>
+          <caret line="2022" column="20" selection-start-line="2022" selection-end-line="2023" />
         </state>
       </provider>
     </entry>
@@ -848,6 +720,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/upload/1547727408.png">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/user/Profile/Newsfeed.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1477">
+          <caret line="375" selection-start-line="375" selection-end-line="375" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/upload/20180328_220521.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/upload/1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/upload/20180328_223425.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/uploads/1547729442.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="22" column="95" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
+          <folding>
+            <element signature="e#40#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
